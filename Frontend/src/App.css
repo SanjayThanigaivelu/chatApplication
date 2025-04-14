@@ -1,0 +1,34 @@
+.app {
+  font-family: sans-serif;
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.auth input,
+.chat input {
+  padding: 0.5rem;
+  margin: 0.3rem;
+  width: 70%;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.messages {
+  border: 1px solid #ccc;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.message {
+  margin: 0.5rem 0;
+  text-align: left;
+}
