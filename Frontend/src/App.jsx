@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import './App.css';
 
-const socket = io('http://localhost:5000'); 
+const socket = io('https://chatapplication-61kn.onrender.com'); 
 
 function App() {
   const [token, setToken] = useState('');
@@ -13,7 +13,7 @@ function App() {
   const [file, setFile] = useState(null);
 
   const register = async () => {
-    const res = await fetch('http://localhost:5000/api/auth/register', {
+    const res = await fetch('https://chatapplication-61kn.onrender.com/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),
@@ -23,7 +23,7 @@ function App() {
   };
 
   const login = async () => {
-    const res = await fetch('http://localhost:5000/api/auth/login', {
+    const res = await fetch('https://chatapplication-61kn.onrender.com/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),
@@ -42,7 +42,7 @@ function App() {
     const formData = new FormData();
     formData.append('file', file);
 
-    const res = await fetch('http://localhost:5000/api/chat/upload', {
+    const res = await fetch('https://chatapplication-61kn.onrender.com/api/chat/upload', {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
